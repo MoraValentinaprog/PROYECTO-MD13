@@ -1,28 +1,33 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Inicio - Blog{% endblock %}
+{% block title %}Inicio - Mi Blog Django{% endblock %}
 
 {% block content %}
-<h2 class="mb-4">Últimas Publicaciones</h2>
-<div class="row">
-    {% for post in posts %}
-    <div class="col-md-6 mb-4">
-        <div class="card h-100 shadow-sm border-0">
-            <div class="card-body">
-                <h5 class="card-title text-primary">{{ post.titulo }}</h5>
-                <h6 class="card-subtitle mb-3 text-muted">
-                    Escrito por <strong>{{ post.autor.username }}</strong> el {{ post.fecha_creacion|date:"d/m/Y" }}
-                </h6>
-                <p class="card-text">{{ post.contenido|truncatewords:25 }}</p>
-                
-                <a href="{% url 'post_detalle' post.pk %}" class="btn btn-sm btn-outline-primary mt-2">Leer artículo completo</a>
-            </div>
+<div class="container mt-5">
+    
+    <div class="bg-light p-5 rounded text-center mb-5">
+        <h1 class="display-5 fw-bold">Mi Blog Django</h1>
+        <p class="lead text-muted">Proyecto de práctica para aprender modelos, vistas, formularios, templates y autenticación con Django.</p>
+        
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mt-4">
+            <a href="#" class="btn btn-primary btn-lg px-4 gap-3">Ver publicaciones</a>
+            <a href="#" class="btn btn-primary btn-lg px-4">Crear publicación</a>
         </div>
     </div>
-    {% empty %}
-    <div class="col-12">
-        <div class="alert alert-info">Aún no hay publicaciones en el blog. ¡Iniciá sesión y sé el primero en escribir!</div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h3 class="mb-3">¿Qué incluye este proyecto?</h3>
+            <ul class="fs-5">
+                <li>CRUD completo de publicaciones</li>
+                <li>Templates con herencia</li>
+                <li>Class Based Views</li>
+                <li>Model Forms</li>
+                <li>URLs con namespacing</li>
+                <li>Panel de administración</li>
+            </ul>
+        </div>
     </div>
-    {% endfor %}
+
 </div>
 {% endblock %}
