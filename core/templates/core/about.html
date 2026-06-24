@@ -3,11 +3,22 @@
 {% block title %}Acerca de mí{% endblock %}
 
 {% block content %}
-<div class="row justify-content-center text-center mt-5">
-    <div class="col-md-8">
-        <h2 class="text-primary mb-4">¡Hola! Soy el desarrollador de este Blog</h2>
-        <p class="fs-5 text-muted">Este proyecto fue construido como trabajo final de certificación. Utiliza el framework Django, base de datos SQLite, un sistema de autenticación de roles y un diseño adaptativo con Bootstrap 5.</p>
-        <p class="fs-5 text-muted">¡Gracias por visitar mi plataforma!</p>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow border-0 p-5 text-center">
+                <div class="card-body">
+                    <h2 class="display-5 fw-bold text-dark mb-2">¡Hola! Soy Mora Valentina</h2>
+                    <h4 class="text-secondary mb-4 fw-light">Desarrolladora Backend y creadora de esta página web</h4>
+                    <p class="lead text-muted mb-4 mx-auto" style="max-width: 700px; line-height: 1.8;">
+                        Este blog es el proyecto final de mi certificación en Python. Acá vas a poder explorar diferentes artículos, registrarte como usuario y ver cómo funciona una aplicación web real por detrás.
+                    </p>
+                    <p class="text-muted mb-0 mx-auto" style="max-width: 700px; line-height: 1.8;">
+                        Me enfoqué en construir un código limpio, seguro y fácil de navegar. ¡Espero que te guste el resultado tanto como a mí me gustó programarlo!
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
