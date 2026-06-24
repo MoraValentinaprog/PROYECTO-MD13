@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Inicio - Blog{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">Últimas Publicaciones</h2>
+<div class="row">
+    {% for post in posts %}
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title text-primary">{{ post.titulo }}</h5>
+                <h6 class="card-subtitle mb-3 text-muted">
+                    Escrito por <strong>{{ post.autor.username }}</strong> el {{ post.fecha_creacion|date:"d/m/Y" }}
+                </h6>
+                <p class="card-text">{{ post.contenido|truncatewords:25 }}</p>
+                
+                <a href="{% url 'post_detalle' post.pk %}" class="btn btn-sm btn-outline-primary mt-2">Leer artículo completo</a>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <div class="alert alert-info">Aún no hay publicaciones en el blog. ¡Iniciá sesión y sé el primero en escribir!</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
