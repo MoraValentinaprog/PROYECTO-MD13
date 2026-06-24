@@ -5,6 +5,9 @@ Este proyecto es una aplicación web tipo blog desarrollada con Django. Permite 
 
 El objetivo es consolidar los conocimientos adquiridos durante el curso mediante una aplicación funcional, estructurada y lista para ser presentada como proyecto final.
 
+## Enlace del proyecto URL pública
+- https://proyecto-md13-1.onrender.com
+
 ## 🚀 Funcionalidades principales
 
 ### 📝 Posts (Publicaciones)
@@ -90,6 +93,7 @@ python manage.py runserver
 - /crear/ → Redactar nuevo artículo
 
 - /admin/ → Panel de administración
+
 
 ## 🔑 Autenticación
 
