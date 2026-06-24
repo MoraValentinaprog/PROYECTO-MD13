@@ -34,15 +34,18 @@ El objetivo es consolidar los conocimientos adquiridos durante el curso mediante
 * Class Based Views (CBV)
 * Django Templates
 
+---
+
 ## ⚙️ Instalación y ejecución local
 
-**1. Clonar repositorio**
-```bash
+### 1. Clonar Repositorio
+
+```
 git clone https://github.com/MoraValentinaprog/PROYECTO-MD13.git
 cd PROYECTO-MD13
+```
 
-### 2. Crear entorno virtual
-
+### 2. Crear Entorno Virtual
 ```
 python -m venv .venv
 source .venv/bin/activate  # Linux / Mac
@@ -76,13 +79,16 @@ python manage.py runserver
 
 ## 🌐 URLs principales
 
-- / → Home
-- /posts/ → Listado de posts
-- /posts/create/ → Crear post
-- /posts/<id>/ → Detalle
-- /posts/<id>/edit/ → Editar
-- /posts/<id>/delete/ → Eliminar
-- /search/ → Búsqueda de autores
+- / → Home (Página principal con el listado de posts)
+
+- /about/ → Acerca de mí
+
+- /login/ → Iniciar sesión
+
+- /registro/ → Crear cuenta nueva
+
+- /crear/ → Redactar nuevo artículo
+
 - /admin/ → Panel de administración
 
 ## 🔑 Autenticación
