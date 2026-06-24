@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-#=#m+^%#m@eu2&i$y!fx(0n^+f&$)oslm@cj30cgbu-xw_)-qg
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -117,6 +118,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+# Carpeta raíz donde el servidor agrupará los archivos estáticos en producción (Requerido por Render y WhiteNoise)
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
 AUTH_USER_MODEL = 'core.Usuario'
 
 # Redirecciones de seguridad (Login/Logout)
@@ -127,6 +131,3 @@ LOGOUT_REDIRECT_URL = 'home'
 import os
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# Carpeta raíz donde el servidor agrupará los archivos estáticos en producción
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
